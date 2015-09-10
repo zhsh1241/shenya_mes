@@ -1,2 +1,3 @@
+2015.9.10
 1.执行sql文件下的脚本USP_Report_GetInventoryMonitor
-2.部署应用程序
+2.部署Web应用程序
