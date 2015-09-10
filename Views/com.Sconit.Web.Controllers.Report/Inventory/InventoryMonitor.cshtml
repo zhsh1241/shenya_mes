@@ -66,19 +66,8 @@
         </div>
 
         <div class="search-label">
-            <label>
-                @Resources.MD.Item.Item_MaterialsGroup
-            </label>
         </div>
         <div class="search-field">
-            @{
-                Html.RenderAction("_ItemCategoryDropDownList", "Common", new
-                {
-                    controlName = "MaterialsGroup",
-                    includeBlankOption = true,
-                    SubCategory = 5
-                });
-            }
         </div>
         <div class="search-label">
             <label>
