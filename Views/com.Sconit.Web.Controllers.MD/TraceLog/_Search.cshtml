@@ -75,13 +75,30 @@
 	    {"type", "submit"},
 	    {"id", "btnSearch"}
 	})
-            @Html.Button(Resources.SYS.Global.Button_New, "Url_Currency_Edit", new Dictionary<string, string>()
+            @Html.Button("执行", "Url_TraceLog_View", new Dictionary<string, string>()
 	{
 	    {"type", "button"},
-	    {"id", "btnNew"},
-        {"onclick","location.href='"+@Url.Content("~/Currency/New")+"'"}
+	    {"id", "btnExecute"},
+        {"onclick","btnExecute_Click()"}
 	})
         </div>
 
     }
 </fieldset>
+<script>
+    function btnExecute_Click() {
+        $.ajax({
+            type: "get",
+            dataType: "html",
+            url: "/TraceLog/Execute/",
+            cache: false,
+            success: function (data, textStatus) {
+                $message.success("执行成功！");
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                var errorMessages = XMLHttpRequest.responseText;
+                $message.error(errorMessages);
+            }
+        });
+    }
+</script>
