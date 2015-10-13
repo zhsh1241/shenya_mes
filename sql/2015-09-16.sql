@@ -12,10 +12,12 @@ select 'TraceTable','ACC_UserPermission','TraceTable_ACC_UserPermission',0,3 uni
 select 'TraceTable','ACC_UserPermissionGroup','TraceTable_ACC_UserPermissionGroup',0,4 union all
 select 'TraceTable','ACC_UserRole','TraceTable_ACC_UserRole',0,5 union all
 select 'TraceTable','SYS_EntityPreference','TraceTable_SYS_EntityPreference',0,6 union all
+select 'TraceTable','ACC_RolePermission','TraceTable_ACC_RolePermission',0,7 union all
 select 'OperatorType','CREATE','OperatorType_CREATE',1,0 union all
 select 'OperatorType','UPDATE','OperatorType_UPDATE',0,1 union all
 select 'OperatorType','DELETE','OperatorType_DELETE',0,2
 go
+
 
 
 insert into sys_menu 
